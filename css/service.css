@@ -1,0 +1,201 @@
+
+:root{
+    --brandColor:#5bc5f4;
+    --color_heading:#3c3e41;
+    --roboto-r:'Roboto-Regular';
+    --roboto-m:'Roboto-Medium';
+    --roboto-b:'Roboto-Bold';
+}
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('../fonts/Roboto/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: url('../fonts/Roboto/Roboto-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('../fonts/Roboto/Roboto-Bold.ttf');
+}
+p{
+    color: var(--color_heading);
+}
+
+
+#service {
+    background-color: #f4f5f6;
+    padding: 95px 0px ;
+}
+/* common heading part start */
+.container .common_heading{
+    text-align: center;
+}
+.container .common_heading h2{
+    display: inline-block;
+    font-size: 26px;
+    letter-spacing: -1px;
+    line-height: 22px;
+    color: var(--color_heading);
+    font-weight: 800;
+    font-family: var(--roboto-m);
+    letter-spacing: 1px;
+    text-align: center;
+    /* margin-top: 30px; */
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    position: relative;
+    
+}
+.container .common_heading h2::after{
+    position: absolute;
+    content: '';
+    width: 85px;
+    height: 1px;
+    left: -20px;
+    bottom: -25px;
+    background-color: var(--brandColor);
+}
+.container .common_heading h2::before{
+    position: absolute;
+    content: '';
+    width: 85px;
+    height: 1px;
+    right: -20px;
+    bottom: -25px;
+    background-color: var(--brandColor);
+}
+.container .common_heading_logo{
+    text-align: center;
+    color: var(--brandColor);
+
+}
+.container .common_heading_logo i{
+    font-size: 21px;
+    line-height: 21px;
+    color: #ffc155;
+}
+/* common heading part end */
+.sub_title{
+    color: var(--color_heading);
+    text-align: center;
+    margin-top: 20px ;
+    margin-bottom: 50px;
+    font-family: var(--roboto-r);
+}
+
+.edition_card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 15px 40px 15px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 5px 2px rgba(114, 112, 112, 0.3);
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    border-radius: 15px;
+    max-width: 19rem;
+    margin: 0 auto;
+
+}
+.innner_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: translateY(10px);
+    transition: all ease-in-out .3s;
+}
+
+.innner_content .icon{
+    font-size: 60px;
+    color: var(--brandColor);
+    position: relative;
+    padding: 20px 0px ;
+    transition: all ease-in-out .3s;
+}
+.innner_content .icon::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #CCCCCC;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.innner_content h4 {
+    font-size: 16px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #333333;
+    font-weight: 400;
+    font-family: var(--roboto-m);
+    text-align: center;
+    padding: 20px 0px ;
+    transition: all ease-in-out .3s;
+    margin-bottom: 0px;
+}
+.innner_content p{
+    font-size: 12px;
+    line-height: 22px;
+    color: #777777;
+    font-weight: 300;
+    text-align: center;
+    font-family: var(--roboto-r);
+    padding: 12px 0px ;
+    transition: all ease-in-out .3s;
+}
+.innner_content a{
+    text-decoration: none;
+    background-color: var(--brandColor);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: all ease-in-out .3s;
+}
+.corner_circle{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    top: 0;
+    right: 0;
+    transform: translate(50%,-50%);
+    z-index: -1;
+    background-clip: padding-box;
+    background-color: var(--brandColor);
+    transition: all ease-in-out .3s;
+}
+.edition_card:hover .icon,
+.edition_card:hover h4,
+.edition_card:hover p,
+.edition_card:hover i {
+    color: #ffffff;
+    transition: all ease-in-out .3s;
+} 
+.edition_card:hover .corner_circle{
+    width: 100%;
+    height: 100%;
+    transform: translate(0%,0%);
+    border-radius: 0px;
+}
+.edition_card:hover .icon::after{
+    background-color:white;
+    transition: all ease-in-out .3s;
+}
+.edition_card:hover .innner_content{
+    transform: translateY(-10px);
+    transition: all ease-in-out .3s;
+}
+.edition_card:hover .innner_content a{
+    opacity: 1;
+    transition: all ease-in-out .3s;
+    background-color: #ffffff;
+    color: var(--brandColor);
+}
